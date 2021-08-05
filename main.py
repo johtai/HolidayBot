@@ -1,10 +1,8 @@
 from telegram import ReplyKeyboardMarkup, InlineKeyboardMarkup
 from telegram.ext import Updater, MessageHandler, Filters
 from telegram.ext import CallbackContext, CommandHandler
-import datetime
-import requests
+import datetime, requests, datetime
 from bs4 import BeautifulSoup
-import os, datetime
 
 
 reply_keyboard = [['/info', '/today']]
@@ -18,7 +16,7 @@ def start(update, context):
 
 
 def info(update, context):
-    update.message.reply_text("Команда /today отобразит список праздников, которые празднуют по всему миру")
+    update.message.reply_text("Используйте команду /today, чтобы увидеь праздники, которые отмечают сегодня")
 
 
 def today(update, context):
